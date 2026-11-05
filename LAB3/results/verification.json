@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "verified_at_utc": "2026-11-05T04:26:32.722290+00:00",
+  "results_directory": "D:\\当代人工智能\\lab3\\GitHub上传\\results",
+  "verification_method": "Independent standard-library reconstruction from 10000 prediction rows/group; complete train/validation partition and checkpoint evidence cross-checks",
+  "scope": "Consistency verification of saved evidence; does not rerun inference or independently reload CIFAR labels",
+  "same_train_validation_partition": true,
+  "same_test_true_labels": true,
+  "source_sha256": {
+    ".gitignore": "d1fb8a807a049b7167f585cadf6e050d83c02efa10caab523ebcbca96c663340",
+    "README.md": "f2e81ff79a418a0d02849f3870dc385e125aaddcb0ecfe39e9a14ef1d4fee4d0",
+    "requirements.txt": "8ecf71a88eb02f7f301292e147499337f5f20a7442b13a9b088c7ec62f5ef48f",
+    "run_experiments.ps1": "01010057d5bbb8febaf00fcecf9310861c67f04281c00624548c345952f79c94",
+    "src/__init__.py": "92c5b5841d07b90c89077e0d527acc6aa13e1a799469e9e9cefeb8ac04b03ef2",
+    "src/evaluate.py": "108ae479f0167757502b1677b824fed610c9d56618ab8c1090418f7a06f2859b",
+    "src/models.py": "31601fbcd22b3f63f8feab99d7daec3f09917ad98d7734030363874badb527f9",
+    "src/train.py": "0011f792f23f4331d123be33b40c0ce181d79808e30d7d7e7852dc6a8691cbc0",
+    "tests/test_experiment.py": "415a9210a059ecde30d2322e2a033c6c0d7ba9ffc099a51ae1f2657e79034b46",
+    "tools/build_report.py": "589d709664538faec4850c573907aa7bf8b9185905da44773d50ff43b5151376",
+    "tools/download_data.py": "42caa7f656898cd0f2019bc0ad52ff36caa7b031afb803de84380c6cfbd7e6e8",
+    "tools/package_submission.py": "b3ea5ebb9de49980169faa0a55fd98fc48d0737f1783740de122245dfcb84d4f",
+    "tools/verify_results.py": "a5f370217590dd2c450906364cb00b18dc567235a07c8b6a112f84039b46f70c"
+  },
+  "experiments": {
+    "baseline": {
+      "passed": true,
+      "model_name": "baseline",
+      "augmentation": "none",
+      "test_samples": 10000,
+      "correct": 8134,
+      "overall_accuracy": 0.8134,
+      "macro_f1": 0.8131746802547838,
+      "test_true_labels_sha256": "cec8a24a1e92aa2ecaa0bbd3dbfa86bf6cd8759fbd209a832824c8cf0afca9d5",
+      "per_class_accuracy": {
+        "airplane": 0.851,
+        "automobile": 0.903,
+        "bird": 0.714,
+        "cat": 0.664,
+        "deer": 0.799,
+        "dog": 0.715,
+        "frog": 0.859,
+        "horse": 0.823,
+        "ship": 0.902,
+        "truck": 0.904
+      },
+      "confusion_matrix_orientation": "rows=true class, columns=predicted class",
+      "completed_epochs": 30,
+      "best_epoch": 30,
+      "best_val_accuracy": 0.8188,
+      "training_seconds": 193.94448339999985,
+      "split": {
+        "train_size": 45000,
+        "val_size": 5000,
+        "train_sha256": "d7589a795c6ec524da7fbb799ee8fa7f6b8ab412ea32ccea7712f5ea6ade2bab",
+        "val_sha256": "97b400bc3dec0357a13088a6e3eda1d17d44343b693837c16b27b766a20672ae",
+        "class_count_check": "Stored counts agree across split/summary: train=4500/class, val=500/class; raw labels not reloaded"
+      },
+      "checkpoint": {
+        "status": "sha256_and_metadata_verified",
+        "sha256": "8291c4b575330c94467b1828c92a2159379bb18b333016425d13689ac4d19748",
+        "epoch": 30,
+        "model_name": "baseline"
+      },
+      "evidence_sha256": {
+        "predictions.csv": "60dcf1907ad3e6bb2cc5c4f4ab7ee62d10df18c860569a17fdceca1c1e0c0c0e",
+        "test_metrics.json": "775a6bd4dc88def698d6abab16d714af0124fe6da157030880d7c6cd7cdbb172",
+        "history.csv": "e8fae31b8bccc8cb3f6ae2ac9c156b1e4cddd6ba6b9f02fe941d55b24f014faf",
+        "summary.json": "c50610ab9b098624f731f802a928b4a02884ab4217be733a6af1b2360c7428f4",
+        "split_indices.json": "5bbc392e1d96a5547771315fa250644d552adf3b1a805f2e15d25522553c70d1",
+        "config.json": "88b0ddfe697c137197d9574c97b758ae122e7e65d192b23b9897490a203145aa"
+      }
+    },
+    "ablation": {
+      "passed": true,
+      "model_name": "baseline",
+      "augmentation": "standard",
+      "test_samples": 10000,
+      "correct": 8110,
+      "overall_accuracy": 0.811,
+      "macro_f1": 0.8107856815572819,
+      "test_true_labels_sha256": "cec8a24a1e92aa2ecaa0bbd3dbfa86bf6cd8759fbd209a832824c8cf0afca9d5",
+      "per_class_accuracy": {
+        "airplane": 0.817,
+        "automobile": 0.908,
+        "bird": 0.758,
+        "cat": 0.637,
+        "deer": 0.787,
+        "dog": 0.735,
+        "frog": 0.862,
+        "horse": 0.805,
+        "ship": 0.914,
+        "truck": 0.887
+      },
+      "confusion_matrix_orientation": "rows=true class, columns=predicted class",
+      "completed_epochs": 30,
+      "best_epoch": 28,
+      "best_val_accuracy": 0.8114,
+      "training_seconds": 324.64156980000007,
+      "split": {
+        "train_size": 45000,
+        "val_size": 5000,
+        "train_sha256": "d7589a795c6ec524da7fbb799ee8fa7f6b8ab412ea32ccea7712f5ea6ade2bab",
+        "val_sha256": "97b400bc3dec0357a13088a6e3eda1d17d44343b693837c16b27b766a20672ae",
+        "class_count_check": "Stored counts agree across split/summary: train=4500/class, val=500/class; raw labels not reloaded"
+      },
+      "checkpoint": {
+        "status": "sha256_and_metadata_verified",
+        "sha256": "c39a013b4e6e1c94f2096ee9b84695828afc6fdf3df388c98ba2c78be1fbcd75",
+        "epoch": 28,
+        "model_name": "baseline"
+      },
+      "evidence_sha256": {
+        "predictions.csv": "723f95cb94d398bad26f92bfff5c0731fe238689f96ff77e0c1759d29d2c581a",
+        "test_metrics.json": "a9e816292e9410fcaf89575f99ae9f29c822d4f356e7e614636d1a0d7f3579fe",
+        "history.csv": "c9a11a6275b45c6630483ab28b86e3b82a0c7c484b9d069a3efc35aa783bb37e",
+        "summary.json": "7f258a2fe71153c221d572e471a42adbc886485f20cb01bed9a7dac80f868153",
+        "split_indices.json": "5bbc392e1d96a5547771315fa250644d552adf3b1a805f2e15d25522553c70d1",
+        "config.json": "eec3294596f9f0ee5f62e34f2323f1e38becb6144b5af3670de8949893d13d11"
+      }
+    },
+    "improved": {
+      "passed": true,
+      "model_name": "improved",
+      "augmentation": "standard",
+      "test_samples": 10000,
+      "correct": 8874,
+      "overall_accuracy": 0.8874,
+      "macro_f1": 0.8869353947524957,
+      "test_true_labels_sha256": "cec8a24a1e92aa2ecaa0bbd3dbfa86bf6cd8759fbd209a832824c8cf0afca9d5",
+      "per_class_accuracy": {
+        "airplane": 0.914,
+        "automobile": 0.95,
+        "bird": 0.848,
+        "cat": 0.736,
+        "deer": 0.89,
+        "dog": 0.846,
+        "frog": 0.904,
+        "horse": 0.913,
+        "ship": 0.941,
+        "truck": 0.932
+      },
+      "confusion_matrix_orientation": "rows=true class, columns=predicted class",
+      "completed_epochs": 30,
+      "best_epoch": 29,
+      "best_val_accuracy": 0.8956,
+      "training_seconds": 678.1132017999998,
+      "split": {
+        "train_size": 45000,
+        "val_size": 5000,
+        "train_sha256": "d7589a795c6ec524da7fbb799ee8fa7f6b8ab412ea32ccea7712f5ea6ade2bab",
+        "val_sha256": "97b400bc3dec0357a13088a6e3eda1d17d44343b693837c16b27b766a20672ae",
+        "class_count_check": "Stored counts agree across split/summary: train=4500/class, val=500/class; raw labels not reloaded"
+      },
+      "checkpoint": {
+        "status": "sha256_and_metadata_verified",
+        "sha256": "e75a91ec2d524f883165ca85b402fafb8f7678603231f7e448a40c086f97c066",
+        "epoch": 29,
+        "model_name": "improved"
+      },
+      "evidence_sha256": {
+        "predictions.csv": "a854fc5e1be08ad5c291e698718e38914d04af719f0ce994bbc35fff34fa22a6",
+        "test_metrics.json": "311504c8ab9afcbf62a97b5a62c59e550c44fb8b67f52b9e5d81b3ff289f9afe",
+        "history.csv": "a23e2aea9c796dd6db8033045b9b0927c172e839ab46d2e8fd3f29ebb2c3c44a",
+        "summary.json": "1a62ee4cee6dc1388361050fac3d573596b3187951f7d21f6b5ef86aa08117da",
+        "split_indices.json": "5bbc392e1d96a5547771315fa250644d552adf3b1a805f2e15d25522553c70d1",
+        "config.json": "482b37faad4f6a497edcf5ebd59cefb75c25abb05e5c1a7e1d154eca74f04e56"
+      }
+    }
+  }
+}

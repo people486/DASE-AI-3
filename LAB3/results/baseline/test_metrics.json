@@ -1,0 +1,373 @@
+{
+  "model_name": "baseline",
+  "checkpoint": "results\\baseline\\best.pt",
+  "checkpoint_sha256": "8291c4b575330c94467b1828c92a2159379bb18b333016425d13689ac4d19748",
+  "selected_epoch": 30,
+  "best_val_accuracy": 0.8188,
+  "num_test_samples": 10000,
+  "correct": 8134,
+  "overall_accuracy": 0.8134,
+  "per_class_accuracy_definition": "Recall: correct predictions / true-class support. Not one-vs-rest accuracy.",
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "airplane",
+      "support": 1000,
+      "correct": 851,
+      "accuracy": 0.851,
+      "precision": 0.8035882908404155,
+      "recall": 0.851,
+      "f1": 0.8266148615832929
+    },
+    {
+      "class_id": 1,
+      "class_name": "automobile",
+      "support": 1000,
+      "correct": 903,
+      "accuracy": 0.903,
+      "precision": 0.9204892966360856,
+      "recall": 0.903,
+      "f1": 0.911660777385159
+    },
+    {
+      "class_id": 2,
+      "class_name": "bird",
+      "support": 1000,
+      "correct": 714,
+      "accuracy": 0.714,
+      "precision": 0.7315573770491803,
+      "recall": 0.714,
+      "f1": 0.7226720647773279
+    },
+    {
+      "class_id": 3,
+      "class_name": "cat",
+      "support": 1000,
+      "correct": 664,
+      "accuracy": 0.664,
+      "precision": 0.6613545816733067,
+      "recall": 0.664,
+      "f1": 0.6626746506986028
+    },
+    {
+      "class_id": 4,
+      "class_name": "deer",
+      "support": 1000,
+      "correct": 799,
+      "accuracy": 0.799,
+      "precision": 0.7727272727272727,
+      "recall": 0.799,
+      "f1": 0.7856440511307767
+    },
+    {
+      "class_id": 5,
+      "class_name": "dog",
+      "support": 1000,
+      "correct": 715,
+      "accuracy": 0.715,
+      "precision": 0.7510504201680672,
+      "recall": 0.715,
+      "f1": 0.7325819672131147
+    },
+    {
+      "class_id": 6,
+      "class_name": "frog",
+      "support": 1000,
+      "correct": 859,
+      "accuracy": 0.859,
+      "precision": 0.8446411012782694,
+      "recall": 0.859,
+      "f1": 0.8517600396628655
+    },
+    {
+      "class_id": 7,
+      "class_name": "horse",
+      "support": 1000,
+      "correct": 823,
+      "accuracy": 0.823,
+      "precision": 0.8608786610878661,
+      "recall": 0.823,
+      "f1": 0.8415132924335378
+    },
+    {
+      "class_id": 8,
+      "class_name": "ship",
+      "support": 1000,
+      "correct": 902,
+      "accuracy": 0.902,
+      "precision": 0.9038076152304609,
+      "recall": 0.902,
+      "f1": 0.9029029029029029
+    },
+    {
+      "class_id": 9,
+      "class_name": "truck",
+      "support": 1000,
+      "correct": 904,
+      "accuracy": 0.904,
+      "precision": 0.8836754643206256,
+      "recall": 0.904,
+      "f1": 0.893722194760257
+    }
+  ],
+  "macro_f1": 0.8131746802547838,
+  "class_names": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "confusion_matrix": [
+    [
+      851,
+      8,
+      31,
+      13,
+      12,
+      0,
+      7,
+      6,
+      48,
+      24
+    ],
+    [
+      20,
+      903,
+      3,
+      2,
+      0,
+      0,
+      6,
+      0,
+      14,
+      52
+    ],
+    [
+      60,
+      3,
+      714,
+      45,
+      57,
+      39,
+      56,
+      17,
+      4,
+      5
+    ],
+    [
+      18,
+      5,
+      50,
+      664,
+      51,
+      131,
+      41,
+      24,
+      7,
+      9
+    ],
+    [
+      11,
+      1,
+      53,
+      43,
+      799,
+      18,
+      27,
+      43,
+      5,
+      0
+    ],
+    [
+      10,
+      4,
+      43,
+      146,
+      25,
+      715,
+      14,
+      35,
+      3,
+      5
+    ],
+    [
+      6,
+      2,
+      43,
+      44,
+      30,
+      11,
+      859,
+      2,
+      2,
+      1
+    ],
+    [
+      16,
+      1,
+      31,
+      26,
+      54,
+      38,
+      2,
+      823,
+      0,
+      9
+    ],
+    [
+      42,
+      17,
+      7,
+      10,
+      3,
+      0,
+      4,
+      1,
+      902,
+      14
+    ],
+    [
+      25,
+      37,
+      1,
+      11,
+      3,
+      0,
+      1,
+      5,
+      13,
+      904
+    ]
+  ],
+  "loss": 0.5712300030708313,
+  "evaluation_seconds": 1.3232339000001048,
+  "device": "cuda",
+  "torch_version": "2.6.0+cu124",
+  "python_version": "3.12.14",
+  "error_selection": "Up to 12 incorrect examples with highest predicted-class softmax probability; descriptive, not representative.",
+  "top_confident_errors": [
+    {
+      "test_index": 3645,
+      "true_class": "automobile",
+      "predicted_class": "truck",
+      "confidence": 0.9999963045120239
+    },
+    {
+      "test_index": 3560,
+      "true_class": "automobile",
+      "predicted_class": "truck",
+      "confidence": 0.9999376535415649
+    },
+    {
+      "test_index": 2379,
+      "true_class": "airplane",
+      "predicted_class": "ship",
+      "confidence": 0.9999229907989502
+    },
+    {
+      "test_index": 4599,
+      "true_class": "ship",
+      "predicted_class": "automobile",
+      "confidence": 0.9999210834503174
+    },
+    {
+      "test_index": 2226,
+      "true_class": "bird",
+      "predicted_class": "frog",
+      "confidence": 0.9995999932289124
+    },
+    {
+      "test_index": 6590,
+      "true_class": "dog",
+      "predicted_class": "horse",
+      "confidence": 0.9993948936462402
+    },
+    {
+      "test_index": 8723,
+      "true_class": "dog",
+      "predicted_class": "horse",
+      "confidence": 0.9992786049842834
+    },
+    {
+      "test_index": 5923,
+      "true_class": "airplane",
+      "predicted_class": "automobile",
+      "confidence": 0.9992631077766418
+    },
+    {
+      "test_index": 683,
+      "true_class": "ship",
+      "predicted_class": "airplane",
+      "confidence": 0.9987263083457947
+    },
+    {
+      "test_index": 7892,
+      "true_class": "automobile",
+      "predicted_class": "truck",
+      "confidence": 0.9985783100128174
+    },
+    {
+      "test_index": 1506,
+      "true_class": "dog",
+      "predicted_class": "horse",
+      "confidence": 0.9985345602035522
+    },
+    {
+      "test_index": 6723,
+      "true_class": "dog",
+      "predicted_class": "horse",
+      "confidence": 0.9985190033912659
+    }
+  ],
+  "test_protocol": "Entire official test split, deterministic normalization; no test-time augmentation. Checkpoint selected only by validation accuracy.",
+  "gradcam_examples": [
+    {
+      "test_index": 3645,
+      "true_class": "automobile",
+      "predicted_class": "truck",
+      "confidence": 0.9999963045120239,
+      "positive_cam": true
+    },
+    {
+      "test_index": 3560,
+      "true_class": "automobile",
+      "predicted_class": "truck",
+      "confidence": 0.9999376535415649,
+      "positive_cam": true
+    },
+    {
+      "test_index": 2379,
+      "true_class": "airplane",
+      "predicted_class": "ship",
+      "confidence": 0.9999229907989502,
+      "positive_cam": true
+    },
+    {
+      "test_index": 0,
+      "true_class": "cat",
+      "predicted_class": "cat",
+      "confidence": 0.8029811382293701,
+      "positive_cam": true
+    },
+    {
+      "test_index": 2,
+      "true_class": "ship",
+      "predicted_class": "ship",
+      "confidence": 0.9998182654380798,
+      "positive_cam": true
+    },
+    {
+      "test_index": 3,
+      "true_class": "airplane",
+      "predicted_class": "airplane",
+      "confidence": 0.9790904521942139,
+      "positive_cam": true
+    }
+  ]
+}

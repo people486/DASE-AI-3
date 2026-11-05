@@ -1,0 +1,6 @@
+{
+  "checkpoint_sha256": "e75a91ec2d524f883165ca85b402fafb8f7678603231f7e448a40c086f97c066",
+  "inspection_method": "Visual review of saved misclassification and Grad-CAM figures; proposed causes are hypotheses, not causal findings.",
+  "mistakes": "检查具体样本时，我发现 #4784（飞机→船）带有大面积蓝色背景，模型可能受到了类似水面的颜色线索影响；#9227（汽车→卡车）则表现出车辆形状相似带来的困难。#2405 标注为猫，但图像呈绿色团块、轮廓模糊，我认为还需复核原图与标注，不能仅凭缩略图判断标签有误。这些解释仍需通过背景遮挡等实验检验。",
+  "gradcam": "从图4中我观察到，错误样本 #2405、#9227 的热区主要位于主体中部；正确样本 #0 的热区较集中于猫头部附近，#1、#2 则覆盖船身。"
+}
